@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bentech.com.vn/sitemap.xml
