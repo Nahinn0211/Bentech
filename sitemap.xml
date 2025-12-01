@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://bentech.com.vn/</loc>
+    <loc>https://bentech.io.vn/</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://bentech.io.vn/images/ma_kim_kep_chi.png</image:loc>
+      <image:title>Má kìm kẹp chì niêm phong chất lượng cao</image:title>
+      <image:caption>Má kìm kẹp chì niêm phong Bentech - Sản phẩm cho điện lực, logistics, hải quan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bentech.io.vn/images/kim_kep_chi.jpg</image:loc>
+      <image:title>Kẹp chì niêm phong điện lực</image:title>
+      <image:caption>Kẹp chì niêm phong Bentech chất lượng cao</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bentech.io.vn/images/day_xau_chi.jpg</image:loc>
+      <image:title>Dây xâu chì niêm phong</image:title>
+      <image:caption>Dây xâu chì niêm phong đa kích thước</image:caption>
+    </image:image>
   </url>
   <url>
-    <loc>https://bentech.com.vn/about.html</loc>
+    <loc>https://bentech.io.vn/about.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bentech.com.vn/services.html</loc>
+    <loc>https://bentech.io.vn/services.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://bentech.io.vn/images/ma_kim_kep_chi.png</image:loc>
+      <image:title>Má kìm kẹp chì Bentech</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://bentech.com.vn/contact.html</loc>
+    <loc>https://bentech.io.vn/contact.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

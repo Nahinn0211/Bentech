@@ -1,3 +1,26 @@
+# robots.txt for bentech.io.vn
+
 User-agent: *
 Allow: /
-Sitemap: https://bentech.com.vn/sitemap.xml
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Priority pages
+Allow: /index.html
+Allow: /services.html
+Allow: /about.html
+Allow: /contact.html
+
+# Priority images for Google Image Search
+Allow: /images/ma_kim_kep_chi.png
+Allow: /images/kim_kep_chi.jpg
+Allow: /images/day_xau_chi.jpg
+Allow: /images/banner.jpg
+
+# Disallow admin or unnecessary files
+Disallow: /cgi-bin/
+Disallow: /*.php$
+
+# Sitemap location
+Sitemap: https://bentech.io.vn/sitemap.xml
