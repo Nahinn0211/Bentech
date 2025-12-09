@@ -1,63 +1,181 @@
 backend:
-  name: github
-  repo: nahinn0211/bentech
+  name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-  # Quản lý các trang
+  # Collection cho Trang web
   - name: "pages"
     label: "Trang web"
-    folder: "content/pages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Tiêu đề trang", name: "title", widget: "string"}
-      - {label: "Mô tả (SEO)", name: "description", widget: "text", required: false}
-      - {label: "Ảnh đại diện", name: "image", widget: "image", required: false}
-      - {label: "Nội dung", name: "body", widget: "markdown"}
-      - {label: "Ngày đăng", name: "date", widget: "datetime"}
-      - {label: "Hiển thị", name: "published", widget: "boolean", default: true}
+    files:
+      # Trang chủ
+      - label: "Trang chủ"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string", default: "Má kìm kẹp chì | Bentech" }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Meta Keywords", name: "keywords", widget: "string" }
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Pretitle", name: "pretitle", widget: "string", default: "Chào mừng đến với BENTECH" }
+              - { label: "Main Title", name: "title", widget: "text" }
+              - { label: "Hotline", name: "hotline", widget: "string", default: "0973.166.155" }
+              - { label: "Main Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "image_alt", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Pretitle", name: "pretitle", widget: "string", default: "Giới thiệu" }
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+          - label: "Products Section"
+            name: "products"
+            widget: "object"
+            fields:
+              - { label: "Pretitle", name: "pretitle", widget: "string", default: "Sản phẩm" }
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Lead Text", name: "lead", widget: "text" }
+          - label: "Clients Section"
+            name: "clients"
+            widget: "object"
+            fields:
+              - { label: "Pretitle", name: "pretitle", widget: "string", default: "Khách hàng" }
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Lead Text", name: "lead", widget: "text" }
+          - label: "CTA Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Lead Text", name: "lead", widget: "text" }
+              - { label: "Button Text", name: "button_text", widget: "string", default: "Liên hệ ngay" }
 
-  # Quản lý sản phẩm/dịch vụ
-  - name: "services"
-    label: "Dịch vụ"
-    folder: "content/services"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Tên dịch vụ", name: "title", widget: "string"}
-      - {label: "Mô tả ngắn", name: "excerpt", widget: "text"}
-      - {label: "Ảnh dịch vụ", name: "image", widget: "image"}
-      - {label: "Giá (VNĐ)", name: "price", widget: "number", required: false}
-      - {label: "Nội dung chi tiết", name: "body", widget: "markdown"}
-      - {label: "Thứ tự hiển thị", name: "order", widget: "number", default: 0}
+      # Trang Sản phẩm
+      - label: "Trang Sản phẩm"
+        name: "services"
+        file: "services.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "Sản phẩm" }
+          - label: "Page Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - { label: "Small Title", name: "small_title", widget: "string", default: "Sản phẩm" }
+              - { label: "Main Title", name: "main_title", widget: "text" }
+          - label: "Page Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Lead Text", name: "lead", widget: "text" }
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            fields:
+              - { label: "Product Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt", name: "image_alt", widget: "string" }
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "feature", widget: "string" }
 
-  # Cài đặt website
+      # Trang Giới thiệu
+      - label: "Trang Giới thiệu"
+        name: "about"
+        file: "about.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "Giới thiệu" }
+          - label: "Page Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - { label: "Small Title", name: "small_title", widget: "string", default: "Giới thiệu" }
+              - { label: "Main Title", name: "main_title", widget: "text" }
+          - label: "Page Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Lead Text", name: "lead", widget: "text" }
+          - label: "Journey Section"
+            name: "journey"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Content", name: "content", widget: "text" }
+          - label: "Core Values"
+            name: "values"
+            widget: "list"
+            fields:
+              - { label: "Value Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Why Choose Us"
+            name: "why_choose"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+
+      # Trang Liên hệ
+      - label: "Trang Liên hệ"
+        name: "contact"
+        file: "contact.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "Liên hệ" }
+          - label: "Page Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - { label: "Small Title", name: "small_title", widget: "string", default: "Liên hệ" }
+              - { label: "Main Title", name: "main_title", widget: "text" }
+          - label: "Page Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "text" }
+              - { label: "Lead Text", name: "lead", widget: "text" }
+          - label: "Contact Info"
+            name: "contact_info"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Address", name: "address", widget: "text" }
+          - label: "Social Links"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook URL", name: "facebook", widget: "string" }
+              - { label: "Twitter URL", name: "twitter", widget: "string" }
+              - { label: "Instagram URL", name: "instagram", widget: "string" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+
+  # Collection cho Cài đặt chung
   - name: "settings"
     label: "Cài đặt"
     files:
-      - label: "Thông tin công ty"
-        name: "company"
-        file: "content/settings/company.json"
+      - label: "Thông tin chung"
+        name: "general"
+        file: "admin/settings.json"
         fields:
-          - {label: "Tên công ty", name: "companyName", widget: "string"}
-          - {label: "Slogan", name: "slogan", widget: "string", required: false}
-          - {label: "Email", name: "email", widget: "string"}
-          - {label: "Số điện thoại", name: "phone", widget: "string"}
-          - {label: "Địa chỉ", name: "address", widget: "text"}
-          - {label: "Facebook", name: "facebook", widget: "string", required: false}
-          - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
-          - {label: "Logo", name: "logo", widget: "image"}
-      
-      - label: "Trang chủ"
-        name: "homepage"
-        file: "content/settings/homepage.json"
-        fields:
-          - {label: "Tiêu đề chính", name: "heroTitle", widget: "string"}
-          - {label: "Mô tả hero", name: "heroDescription", widget: "text"}
-          - {label: "Ảnh banner", name: "heroBanner", widget: "image"}
-          - {label: "Nút CTA", name: "ctaButton", widget: "string"}
-          - {label: "Link CTA", name: "ctaLink", widget: "string"}
+          - { label: "Site Name", name: "site_name", widget: "string", default: "BENTECH" }
+          - { label: "Site Email", name: "email", widget: "string" }
+          - { label: "Site Phone", name: "phone", widget: "string" }
+          - { label: "Footer About Text", name: "footer_about", widget: "text" }
+          - label: "Social Media"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "Facebook", name: "facebook", widget: "string" }
+              - { label: "Instagram", name: "instagram", widget: "string" }
+              - { label: "Zalo", name: "zalo", widget: "string" }

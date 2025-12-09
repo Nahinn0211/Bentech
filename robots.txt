@@ -1,4 +1,4 @@
-# robots.txt for bentech.io.vn
+# robots.txt for bentech.vn
 
 User-agent: *
 Allow: /
@@ -23,4 +23,4 @@ Disallow: /cgi-bin/
 Disallow: /*.php$
 
 # Sitemap location
-Sitemap: https://bentech.io.vn/sitemap.xml
+Sitemap: https://bentech.vn/sitemap.xml
