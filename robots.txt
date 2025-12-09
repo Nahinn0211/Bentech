@@ -8,7 +8,7 @@ Allow: /js/
 
 # Priority pages
 Allow: /index.html
-Allow: /services.html
+Allow: /ma-kim-kep-chi-2.html
 Allow: /about.html
 Allow: /contact.html
 

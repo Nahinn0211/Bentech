@@ -26,7 +26,20 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <style>
+        .grid-list-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
 
+
+        @media (max-width: 768px) {
+            .grid-list-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 
@@ -68,7 +81,7 @@
 
                     <ul class="s-header__menu-links">
                         <li><a href="about.html">Giới thiệu</a></li>
-                        <li><a href="services.html">Sản phẩm</a></li>
+                        <li><a href="ma-kim-kep-chi-2.html">Sản phẩm</a></li>
                         <li><a href="contact.html">Liên hệ</a></li>
                     </ul> <!-- s-header__menu-links -->
 
@@ -120,40 +133,17 @@
                             <!-- Product: Má Kìm -->
                             <div class="grid-list-items__item list-items__item">
                                 <div class="list-items__item-header">
-                                    <h3 class="list-items__item-title">Má Kìm</h3>
+                                    <h3 class="list-items__item-title">Má kìm kẹp chì</h3>
                                 </div>
                                 <div class="list-items__item-text">
                                     <div style="display:flex; align-items:center;">
-                                        <img src="images/ma_kim_kep_chi.png" alt="Má Kìm"
+                                        <img src="images/ma_kim_kep_chi.png" alt="Má kìm kẹp chì"
                                             style="width:200px; margin-right:20px; border-radius:8px;">
                                         <p>
-                                            Má kìm Bentech được chế tạo từ thép hợp kim chịu lực, đảm bảo độ bền cao và
-                                            chính xác khi thao tác.
-                                            Thiết kế ergonomics giúp thao tác an toàn và thoải mái.
-                                        </p>
-                                    </div>
-                                    <ul class="list-services">
-                                        <li>Chất liệu thép hợp kim cao cấp</li>
-                                        <li>Chống gỉ, chịu lực tốt</li>
-                                        <li>Thiết kế vừa tay, an toàn</li>
-                                    </ul>
-                                </div>
-                            </div> <!-- end list-items__item -->
-
-                            <!-- Product: Kẹp Chì -->
-                            <div class="grid-list-items__item list-items__item">
-                                <div class="list-items__item-header">
-                                    <h3 class="list-items__item-title">Kẹp Chì</h3>
-                                </div>
-                                <div class="list-items__item-text">
-                                    <div style="display:flex; align-items:center;">
-                                        <img src="images/kim_kep_chi.jpg" alt="Kẹp Chì"
-                                            style="width:150px; margin-right:20px; border-radius:8px;">
-                                        <p>
-                                            Kẹp chì Bentech thích hợp cho các ngành công nghiệp, đảm bảo độ chính xác
-                                            khi cố
-                                            định chi tiết.
-                                            Thiết kế bền bỉ, dễ sử dụng và an toàn cho người dùng.
+                                            Được gia công từ chất liệu hợp kim thép cứng, đúc nguyên khối, trên công
+                                            nghệ máy CNC hiện đại nhất. Sản phẩm khắc nội dung rất tinh xảo bởi các kỹ
+                                            thuật viên tay nghề cao. Đặc biệt, sản phẩm được tôi cứng, đen chống gỉ vượt
+                                            trội chịu được các môi trường khắc nghiệt.
                                         </p>
                                     </div>
                                     <ul class="list-services">
@@ -164,14 +154,40 @@
                                 </div>
                             </div> <!-- end list-items__item -->
 
-                            <!-- Product: Dây chì niêm phong -->
+                            <!-- Product: Kẹp Chì -->
                             <div class="grid-list-items__item list-items__item">
                                 <div class="list-items__item-header">
-                                    <h3 class="list-items__item-title">Dây chì niêm phong</h3>
+                                    <h3 class="list-items__item-title">Thân kìm kẹp chì</h3>
                                 </div>
                                 <div class="list-items__item-text">
                                     <div style="display:flex; align-items:center;">
-                                        <img src="images/day_xau_chi.jpg" alt="Dây chì niêm phong Bentech"
+                                        <img src="images/kim_kep_chi.jpg" alt="Thân kìm kẹp chì"
+                                            style="width:150px; margin-right:20px; border-radius:8px;">
+                                        <p>
+                                            Kẹp chì Bentech thích hợp cho các ngành công nghiệp, đảm bảo độ chính xác
+                                            khi cố
+                                            định chi tiết.
+                                            Thiết kế bền bỉ, dễ sử dụng và an toàn cho người dùng. Được thiết kế từ chất
+                                            liệu thép bền bỉ cùng cán tay cầm cao su, có hỗ trợ thêm chức năng cộng lực,
+                                            giúp thao tác nhẹ nhàng thoải mái với năng suất cao.
+                                        </p>
+                                    </div>
+                                    <ul class="list-services">
+                                        <li>Chất liệu thép hợp kim cao cấp</li>
+                                        <li>Chống gỉ, chịu lực tốt</li>
+                                        <li>Thiết kế vừa tay, an toàn</li>
+                                    </ul>
+                                </div>
+                            </div> <!-- end list-items__item -->
+
+                            <!-- Product: Dây chì niêm phong -->
+                            <div class="grid-list-items__item list-items__item">
+                                <div class="list-items__item-header">
+                                    <h3 class="list-items__item-title">Dây xâu chì</h3>
+                                </div>
+                                <div class="list-items__item-text">
+                                    <div style="display:flex; align-items:center;">
+                                        <img src="images/day_xau_chi.jpg" alt="Dây xâu chì"
                                             style="width:150px; margin-right:20px; border-radius:8px;">
                                         <p>
                                             Dây chì niêm phong Bentech được chế tạo từ chất liệu <strong>thép
@@ -179,7 +195,10 @@
                                             bền bỉ,
                                             chịu lực tốt, thích hợp cho việc niêm phong các thiết bị, hàng hóa, đảm bảo
                                             an
-                                            toàn và khó bị phá vỡ.
+                                            toàn và khó bị phá vỡ.Được chế tạo bằng chất liệu chì, xử lý nhiệt cấp cao
+                                            nên rất bền bỉ. Có khả năng chống chịu những tác động ăn mòn từ hóa chất,
+                                            chống oxy hóa rất cao. Dây còn được gia cố thêm lớp vỏ thép có sức căng lớn,
+                                            bền với tác động ngoài từ môi trường.
                                         </p>
                                     </div>
                                     <ul class="list-services">
@@ -190,6 +209,27 @@
                                 </div>
                             </div> <!-- end list-items__item -->
 
+                            <div class="grid-list-items__item list-items__item">
+                                <div class="list-items__item-header">
+                                    <h3 class="list-items__item-title">Viên chì</h3>
+                                </div>
+                                <div class="list-items__item-text">
+                                    <div style="display:flex; align-items:center;">
+                                        <img src="images/vien_chi.jpg" alt="Viên chì"
+                                            style="width:150px; margin-right:20px; border-radius:8px;">
+                                        <p>
+                                            Được làm từ chì nguyên chất, đường kính lỗ xâu chì lớn, dễ dàng xâu sợi.
+                                            Viên chì có tính mềm, giúp các ký hiệu sau khi bấm rõ nét. Đặc biệt, chống
+                                            chịu được với nhiều loại môi trường khắc nghiệt.
+                                        </p>
+                                    </div>
+                                    <ul class="list-services">
+                                        <li>Chất liệu chì nguyên chất</li>
+                                        <li>Độ bền và chịu lực cao</li>
+                                        <li>Dễ sử dụng, đảm bảo an toàn</li>
+                                    </ul>
+                                </div>
+                            </div> <!-- end list-items__item -->
 
                         </div> <!-- grid-list-items -->
                     </div> <!-- end grid-block-->
@@ -243,7 +283,7 @@
                     <h3>Liên kết nhanh</h3>
                     <ul class="link-list">
                         <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="services.html">Sản phẩm</a></li>
+                        <li><a href="ma-kim-kep-chi-2.html">Sản phẩm</a></li>
                         <li><a href="about.html">Giới thiệu</a></li>
                         <li><a href="contact.html">Liên hệ</a></li>
                     </ul>
